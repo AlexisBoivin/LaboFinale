@@ -22,9 +22,9 @@ namespace LaboFinal_A22
     {
         // attributs
         // une liste ou un tableau d'habiletes, le type est donc la classe Habilete
-
+ 
         // Consturcteur
-        // 
+       
         // initialise le contenant pour les habiletés
         // il n'y a que 3 habiletés
         // initialise chacune des habiletés et assigne chacune à une case de l'attribut habiletes

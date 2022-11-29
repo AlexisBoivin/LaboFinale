@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "So7n3Gi24E8iSHmYXtt6kcSlSjBX9g2ID0139rwE/3Mbq60n/UKz6CpaNSH61YlQEbJeotRUVGtFl+7Ml3Opgg==",
+  "dgSpecHash": "MlWdTZ1XtFKQClEqJFJY/16W/EB1viYp12LVgx03XfLq/Xb+8bEmV9WTkfQ148PSP1iRD6lsoIglbmYsR9ANUw==",
   "success": true,
-  "projectFilePath": "C:\\Cegep\\Prog\\LaboFinale\\LaboFinal_A22.csproj",
+  "projectFilePath": "C:\\Programmation 1\\LaboFinale\\LaboFinal_A22.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problème de lecture du fichier cache C:\\Programmation 1\\LaboFinale\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

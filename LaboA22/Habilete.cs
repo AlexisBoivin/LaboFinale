@@ -29,9 +29,17 @@ namespace LaboFinal_A22
         public int tour;
 
         // Constructeur
-        //
-        // Initialise les attributs selons les paramètres reçu du même nom
-        // Initialise tour à 0
+        public Habilete(int id, string nom, int dmg, int recuperation, int tour)
+        {
+            // Initialise les attributs selons les paramètres reçu du même nom
+            // Initialise tour à 0
+            this.id = id;
+            this.nom = nom;
+            this.dmg = dmg;
+            this.recuperation = recuperation;
+            this.tour = 0;
+        }
+  
         // 
         // @param string nom       le nom de l'habilete
         // @param int dmg          le nombre de points de dommage de base pour l'habilete
