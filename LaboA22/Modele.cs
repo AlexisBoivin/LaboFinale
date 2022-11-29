@@ -22,7 +22,7 @@ namespace LaboFinal_A22
     {
         // attributs
         // une liste ou un tableau d'habiletes, le type est donc la classe Habilete
- 
+        List<Habilete> habiletes;
         // Consturcteur
        
         // initialise le contenant pour les habiletés
@@ -57,7 +57,7 @@ namespace LaboFinal_A22
         }
 
         // genererJoueur
-        //
+       
         // configure une instance de la classe joueur selon le nom du fichier et le nom passé en paramètre
         // la première ligne du fichier donne l'ordre des attributs nécessaires pour la classe
         //
@@ -70,18 +70,18 @@ namespace LaboFinal_A22
         public Joueur genererJoueur(string fichier, string nom)
         {
             // Déclarer une variable de type Joueur, nous allons créer l'instance plus tard
-
+            Joueur joueur;
             // Initialiser la classe pour lire le fichier
-
+           StreamReader lecteur = new StreamReader(fichier);
             // Lire la première ligne dans le vide ( on a besoin seulement des stats)
-
+            lecteur.ReadLine();
             // Lire la deuxième ligne et la garder en mémoire
-
+            string ligne = lecteur.ReadLine();
             // Transformer la ligne en tableau de string, en utilisant la virgule comme séparateur
-
+            string[] tableauStats = ligne.Split(',');
             // utiliser le tableau afin d'obtenir les informations désirées pour utiliser le constructeur de la classe Joueur
             // et finir de créer l'instance du joueur avec ces informations
-
+            
             // ne pas oublier d'assigner l'habilete au joueur selon le id après la construction
 
             // retourner le joueur configuré
