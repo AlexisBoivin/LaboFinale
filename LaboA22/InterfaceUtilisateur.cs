@@ -106,7 +106,7 @@ namespace LaboFinal_A22
             this.hauteur = carte.Count() / this.largeur;
 
             // placer le joueur à la position de départ, la première case libre en haut à gauche
-            
+            carte[24] = "J";
 
         }
 
@@ -434,19 +434,34 @@ namespace LaboFinal_A22
 
             // si la position de destination est dans la carte
             // >= 0 et < le nombre d'éléments de la carte
+<<<<<<< Updated upstream
             if (numeroDestination >= 0 && numeroDestination < carte.Count()) 
             // si le contenu de la carte à la position de destination est la sortie (un S)
+=======
+            if (numeroDestination >=0 && numeroDestination < carte.Count())
+            {
+                // si le contenu de la carte à la position de destination est la sortie (un S)
+                if (carte[numeroDestination] == "S")
+                {
+                    // changer la valeur de la variable de retour à true
+                    sortieAtteinte = true;
+                }
+            }
+>>>>>>> Stashed changes
 
-            // changer la valeur de la variable de retour à true
+
+
 
             // si le contenu de la carte à la position de destination est différente de # (un mur)
-
-            // remplacer le joueur (la lettre J) de sa position dans la carte par un vide: " "
-
-            // placer le joueur (le symbole J) dans la carte, à la destination
-
+            if (carte[numeroDestination] != "#")
+            {
+                // remplacer le joueur (la lettre J) de sa position dans la carte par un vide: " "
+                carte[demanderPosition()] = " ";
+                // placer le joueur (le symbole J) dans la carte, à la destination
+                carte[numeroDestination] = "J";
+            }
             // retourner la variable de retour, qui détermine si on a atteint la sortie ou non
-
+            return sortieAtteinte;
         }
     }
 }
