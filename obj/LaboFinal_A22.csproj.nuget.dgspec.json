@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Programmation 1\\LaboFinale\\LaboFinal_A22.csproj": {}
+    "C:\\Cegep\\Prog\\LaboFinale\\LaboFinal_A22.csproj": {}
   },
   "projects": {
-    "C:\\Programmation 1\\LaboFinale\\LaboFinal_A22.csproj": {
+    "C:\\Cegep\\Prog\\LaboFinale\\LaboFinal_A22.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Programmation 1\\LaboFinale\\LaboFinal_A22.csproj",
+        "projectUniqueName": "C:\\Cegep\\Prog\\LaboFinale\\LaboFinal_A22.csproj",
         "projectName": "LaboFinal_A22",
-        "projectPath": "C:\\Programmation 1\\LaboFinale\\LaboFinal_A22.csproj",
-        "packagesPath": "C:\\Users\\borsh\\.nuget\\packages\\",
-        "outputPath": "C:\\Programmation 1\\LaboFinale\\obj\\",
+        "projectPath": "C:\\Cegep\\Prog\\LaboFinale\\LaboFinal_A22.csproj",
+        "packagesPath": "C:\\Users\\Nathan\\.nuget\\packages\\",
+        "outputPath": "C:\\Cegep\\Prog\\LaboFinale\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\borsh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nathan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

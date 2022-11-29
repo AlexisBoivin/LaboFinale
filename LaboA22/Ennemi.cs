@@ -55,7 +55,26 @@ namespace LaboFinal_A22
         }
 
         // estMagique
+        public bool Magique()
+        {
+            bool magique = false;
 
+            if (magique)
+            {
+                return true;
+            }
+
+
+            return magique;
+        }
+
+        public int att()
+        {
+          
+
+            
+           
+        }
         // retourne l'attribut magique 
         //
         // @return bool vrai si les attaques sont magiques, faux sinon

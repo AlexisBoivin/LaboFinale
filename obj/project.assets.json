@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\borsh\\.nuget\\packages\\": {}
+    "C:\\Users\\Nathan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Programmation 1\\LaboFinale\\LaboFinal_A22.csproj",
+      "projectUniqueName": "C:\\Cegep\\Prog\\LaboFinale\\LaboFinal_A22.csproj",
       "projectName": "LaboFinal_A22",
-      "projectPath": "C:\\Programmation 1\\LaboFinale\\LaboFinal_A22.csproj",
-      "packagesPath": "C:\\Users\\borsh\\.nuget\\packages\\",
-      "outputPath": "C:\\Programmation 1\\LaboFinale\\obj\\",
+      "projectPath": "C:\\Cegep\\Prog\\LaboFinale\\LaboFinal_A22.csproj",
+      "packagesPath": "C:\\Users\\Nathan\\.nuget\\packages\\",
+      "outputPath": "C:\\Cegep\\Prog\\LaboFinale\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\borsh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Nathan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -64,13 +64,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problème de lecture du fichier cache C:\\Programmation 1\\LaboFinale\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
