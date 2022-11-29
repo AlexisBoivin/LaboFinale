@@ -434,7 +434,7 @@ namespace LaboFinal_A22
 
             // si la position de destination est dans la carte
             // >= 0 et < le nombre d'éléments de la carte
-            if (numeroDestination >=0 && numeroDestination < carte.Count())
+            if (numeroDestination >= 0 && numeroDestination < carte.Count()) 
             // si le contenu de la carte à la position de destination est la sortie (un S)
 
             // changer la valeur de la variable de retour à true

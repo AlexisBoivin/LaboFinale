@@ -35,6 +35,8 @@ namespace LaboFinal_A22
         public int mdef;
         public int hp;
         public bool magique;
+        string vivants;
+        
 
 
         // Constructeur
@@ -53,7 +55,7 @@ namespace LaboFinal_A22
         }
 
         // estMagique
-        
+
         // retourne l'attribut magique 
         //
         // @return bool vrai si les attaques sont magiques, faux sinon
@@ -71,30 +73,58 @@ namespace LaboFinal_A22
         // @param int dmg      le nombre de point de dommage avant la réduction par la défense
         public void defendre(bool magique, int dmg)
         {
-            // si l'attaque est magique
+            int dmgfinaux;
 
-                // les dommages finaux sont le dommage - la défense magique
+            if (magique)
+            {
+                dmgfinaux = dmg - this.mdef;
 
-            // sinon
-
-                // les dommages finaux sont le dommage - la défense
-
-
-                // diminuer les points de vie du nombre de points de dommage final
+            }
+            else
+            {
+                dmgfinaux = dmg - this.def;
+            }
+            
+            hp = hp-dmgfinaux;
 
         }
 
+        public bool estVivant(int hp)
+        {
+            bool vivant = true;
+
+            if (hp>0)
+            {
+                return vivant = true;
+            }
+            else if(hp<=0)
+            {
+                return vivant = false;
+            }
+
+            return vivant;
+
+           
+        }
         // estVivant
         //
         // détermine s'il reste des points de vie
         // 
         // @return bool vrai s'il reste des points de vie, faux sinon
 
-        // enumererStats
-        // 
-        // envoie un string contenant le nom et les points de vie
-        // "Nom : {0}, Hp : {1}"
-        //
-        // @return string le nom et les points de vie selon le format établi
+
+
+
+        public string enumererSats()
+        {
+
+            string stats = "";
+
+            stats = string.Format("Nom : {0}, Hp : {1}" , this.nom , this.hp);
+
+            return stats;
+        }
+
+        
     }
 }
