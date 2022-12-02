@@ -53,9 +53,9 @@ namespace LaboFinal_A22
         public string enumererActions()
         {
             string actions = "Attaquer";
-            if (this.habilete.tour <= 0)
+            if (this.competence.tour <= 0)
             {
-                actions += "," + this.habilete.nom;
+                actions += "," + this.competence.nom;
             }
 
             return actions;
@@ -106,7 +106,7 @@ namespace LaboFinal_A22
         {
             bool vivant = true;
             // détermine s'il reste des points de vie
-            if (this.hp > 0)
+            if (this.hp <= 0)
             {
                 vivant = false;
             }

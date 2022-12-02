@@ -29,7 +29,7 @@ namespace LaboFinal_A22
         public int tour;
 
         // Constructeur
-        public Habilete( string nom, int id, int dmg, int recuperation)
+        public Habilete(string nom, int id, int dmg, int recuperation)
         {
             // Initialise les attributs selons les paramètres reçu du même nom
             // Initialise tour à 0
@@ -39,7 +39,7 @@ namespace LaboFinal_A22
             this.recuperation = recuperation;
             this.tour = 0;
         }
-  
+
         // 
         // @param string nom       le nom de l'habilete
         // @param int dmg          le nombre de points de dommage de base pour l'habilete
@@ -47,15 +47,27 @@ namespace LaboFinal_A22
         // @param int id           l'identificateur unique de l'habilete
 
         // executer
-        //
-        // ajoute le delai de récupération à l'attribut tour
-        // calcul le dommage final selon l'attaque magique reçue en paramètre
-        //
         // @param int matt l'attaque magique du personnage qui utilise l'habilete
-        // @return le nombre de points de dommage total (attaque magique + dommage de l'habilete)
+        public int executer(int matt)
+        {
+        // ajoute le delai de récupération à l'attribut tour
+        this.tour += this.recuperation;
+            // calcul le dommage final selon l'attaque magique reçue en paramètre
+            int dmgFinal = this.dmg + matt;
+            // @return le nombre de points de dommage total (attaque magique + dommage de l'habilete)
+
+            return dmgFinal;
+        }
 
         // recuperer
-        //
-        // enleve 1 tour d'attente à l'attribut tour si il est plus grand que 0
+        public void recuperer()
+        {
+            if (this.tour > 0)
+            {
+                // enleve 1 tour d'attente à l'attribut tour si il est plus grand que 0
+                this.tour = this.tour - 1;
+            }
+        }
+
     }
 }

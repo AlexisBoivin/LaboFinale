@@ -75,10 +75,11 @@ namespace LaboFinal_A22
         public void chargerCarte()
         {
             // initialiser la liste des cases de la carte
-           List<string> carte = new List<string>();
+            this.carte = new List<string>();
             // initialiser un lecteur de fichier texte pour lire le fichier carte.txt
             StreamReader lecteur = new StreamReader("carte.txt");
             // lire la première ligne de la carte. NE PAS METTRE CETTE LIGNE DANS LA LISTE
+            lecteur.ReadLine();
             // initialiser la largeur de la carte en prenant la longueur de la première ligne
             // les string sont des tableau, on a accès à la propriété .Lenght
             this.largeur = lecteur.ReadLine().Length;
@@ -122,7 +123,7 @@ namespace LaboFinal_A22
             int choix = 0;
             Console.WriteLine(this.menuCreation);
             int.TryParse(Console.ReadLine(), out choix);
-            return choix;
+            return choix -1;
             
         }
 
@@ -154,7 +155,7 @@ namespace LaboFinal_A22
                 {
                     // afficher sur la même ligne de console
                     // le symbole de la liste à la position : j + (i * largeur)
-                    Console.Write(carte[j + (i* this.largeur)]);
+                    Console.Write(this.carte[j + (i* this.largeur)]);
                 }
 
                 // sauter une ligne
@@ -434,10 +435,10 @@ namespace LaboFinal_A22
 
             // si la position de destination est dans la carte
             // >= 0 et < le nombre d'éléments de la carte
-<<<<<<< Updated upstream
+
             if (numeroDestination >= 0 && numeroDestination < carte.Count()) 
             // si le contenu de la carte à la position de destination est la sortie (un S)
-=======
+
             if (numeroDestination >=0 && numeroDestination < carte.Count())
             {
                 // si le contenu de la carte à la position de destination est la sortie (un S)
@@ -447,7 +448,7 @@ namespace LaboFinal_A22
                     sortieAtteinte = true;
                 }
             }
->>>>>>> Stashed changes
+
 
 
 

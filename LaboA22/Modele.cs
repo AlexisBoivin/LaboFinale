@@ -13,6 +13,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -72,7 +73,7 @@ namespace LaboFinal_A22
             // Déclarer une variable de type Joueur, nous allons créer l'instance plus tard
             Joueur joueur;
             // Initialiser la classe pour lire le fichier
-           StreamReader lecteur = new StreamReader(fichier);
+           StreamReader lecteur = new StreamReader(fichier + ".txt");
             // Lire la première ligne dans le vide ( on a besoin seulement des stats)
             lecteur.ReadLine();
             // Lire la deuxième ligne et la garder en mémoire
@@ -81,11 +82,18 @@ namespace LaboFinal_A22
             string[] tableauStats = ligne.Split(',');
             // utiliser le tableau afin d'obtenir les informations désirées pour utiliser le constructeur de la classe Joueur
             // et finir de créer l'instance du joueur avec ces informations
-            
+            int[] stats = new int[6];
+            for (int i = 0; i < 5; i++)
+            {
+                int.TryParse(tableauStats[i+1], out stats[i]);
+            }
+            joueur = new Joueur(tableauStats[0], stats[0], stats[1], stats[2], stats[3], stats[4] );
+
             // ne pas oublier d'assigner l'habilete au joueur selon le id après la construction
-
+            joueur.competence = this.habiletes[stats[5]];
             // retourner le joueur configuré
-
+            lecteur.Close();
+            return joueur;
         }
 
         // genererEnnemi
@@ -100,20 +108,31 @@ namespace LaboFinal_A22
         public Ennemi genererEnnemi(string fichier)
         {
             // Déclarer une variable de type Ennemi, nous allons créer l'instance plus tard
-
+            Ennemi ennemi;
             // Initialiser la classe pour lire le fichier
-
+            StreamReader lecteur = new StreamReader(fichier + ".txt");
             // Lire la première ligne dans le vide ( on a besoin seulement des stats)
-
+            lecteur.ReadLine();
             // Lire la deuxième ligne et la garder en mémoire
-
+            string ligne = lecteur.ReadLine();
             // Transformer la ligne en tableau de string, en utilisant la virgule comme séparateur
+            string[] tableauStats = ligne.Split(',');
 
             // utiliser le tableau afin d'obtenir les informations désirées pour utiliser le constructeur de la classe Joueur
             // et finir de créer l'instance du joueur avec ces informations
-
+            int[] stats = new int[5];
+            for (int i = 0; i < 5; i++)
+            {
+                int.TryParse(tableauStats[i + 1], out stats[i]);
+            }
+            bool magique = false;
+            if (tableauStats[6] == "true")
+            {
+                magique = true;
+            }
+            ennemi = new Ennemi(tableauStats[0], stats[0], stats[1], stats[2], stats[3], stats[4],magique);
             // retourner le joueur configuré
-
+            return ennemi;
         }
     }
 }

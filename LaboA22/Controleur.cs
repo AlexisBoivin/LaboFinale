@@ -143,10 +143,10 @@ namespace LaboFinal_A22
             }
 
             bool combat = true;
-            this.joueur.habilete.tour = 0;
+            this.joueur.competence.tour = 0;
             while (combat)
             {
-                this.joueur.habilete.recuperer();
+                this.joueur.competence.recuperer();
                 Console.Clear();
 
                 this.ui.afficherEntete();
@@ -188,7 +188,7 @@ namespace LaboFinal_A22
                 }
                 else if (action == 1)
                 {
-                    combatants[cible].defendre(true, joueur.habilete.executer(joueur.matt));
+                    combatants[cible].defendre(true, joueur.competence.executer(joueur.matt));
                 }
 
                 for (int i = 0; i < combatants.Length; i++)

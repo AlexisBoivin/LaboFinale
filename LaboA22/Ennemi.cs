@@ -55,14 +55,22 @@ namespace LaboFinal_A22
         }
 
         // estMagique
-
-        // retourne l'attribut magique 
-        //
-        // @return bool vrai si les attaques sont magiques, faux sinon
+        public bool estMagique()
+        {
+            // retourne l'attribut magique 
+            // @return bool vrai si les attaques sont magiques, faux sinon
+            return this.magique;
+        }
+        
 
         // attaquer
         //
         // renvoie la statistique d'attaque
+        public int attaquer()
+        {
+            return this.att;
+        }
+
 
         // defendre
         //
@@ -89,17 +97,17 @@ namespace LaboFinal_A22
 
         }
 
-        public bool estVivant(int hp)
+        public bool estVivant()
         {
             bool vivant = true;
 
-            if (hp>0)
+            if (this.hp>0)
             {
-                return vivant = true;
+                 vivant = true;
             }
-            else if(hp<=0)
+            else if(this.hp<=0)
             {
-                return vivant = false;
+                vivant= false;
             }
 
             return vivant;
@@ -115,7 +123,7 @@ namespace LaboFinal_A22
 
 
 
-        public string enumererSats()
+        public string enumererStats()
         {
 
             string stats = "";
