@@ -83,11 +83,11 @@ namespace LaboFinal_A22
             // utiliser le tableau afin d'obtenir les informations désirées pour utiliser le constructeur de la classe Joueur
             // et finir de créer l'instance du joueur avec ces informations
             int[] stats = new int[6];
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 6; i++)
             {
                 int.TryParse(tableauStats[i+1], out stats[i]);
             }
-            joueur = new Joueur(tableauStats[0], stats[0], stats[1], stats[2], stats[3], stats[4] );
+            joueur = new Joueur(nom, stats[0], stats[1], stats[2], stats[3], stats[4] );
 
             // ne pas oublier d'assigner l'habilete au joueur selon le id après la construction
             joueur.competence = this.habiletes[stats[5]];

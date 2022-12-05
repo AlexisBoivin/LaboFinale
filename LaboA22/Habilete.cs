@@ -29,7 +29,7 @@ namespace LaboFinal_A22
         public int tour;
 
         // Constructeur
-        public Habilete(string nom, int id, int dmg, int recuperation)
+        public Habilete(string nom, int dmg, int recuperation, int id)
         {
             // Initialise les attributs selons les paramètres reçu du même nom
             // Initialise tour à 0

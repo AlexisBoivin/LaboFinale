@@ -54,11 +54,11 @@ namespace LaboFinal_A22
             this.arene = new string[] {
                 "###################",
                 "                   ",
-                "     {0}           ",
+                "",
                 "                   ",
-                " J   {0}           ",
+                "",
                 "                   ",
-                "     {0}           ",
+                "",
                 "                   ",
                 "###################"
             };
@@ -230,28 +230,30 @@ namespace LaboFinal_A22
                 string ligne = this.arene[i];
 
                 // si on est à la 3ème ligne
-                if (i == 3)
+                if (i == 2)
                 {
                     // remplacer le marqueur {0} par le nom du premier ennemi
-                    this.arene[i] += ennemis[ennemiAfficher];
+                    Console.Write("     {0}           ", ennemis[ennemiAfficher]);
                     ennemiAfficher++;
                     
                 }
 
 
                 // sinon si on est à la 5 ème ligne 
-                else if (i == 5)
+                else if (i == 4)
                 {
                     // remplacer le marqueur {0} par le nom du deuxième ennemi
-                    this.arene[i] = this.arene[i] + ennemis[ennemiAfficher];
+                    Console.Write(" J   {0}           ", ennemis[ennemiAfficher]);
+                    ennemiAfficher++;
                 }
 
                 
                 // sinon si on est à la 7 ème ligne
-                else if (i == 7)
+                else if (i == 6)
                 {
                     // remplacer le marqueur {0} par le nom du troisième ennemi
-                    this.arene[i] += ennemis[ennemiAfficher];
+                    Console.Write("     {0}           ", ennemis[ennemiAfficher]);
+                    ennemiAfficher++;
                 }
 
 
